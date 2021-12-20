@@ -1,0 +1,93 @@
+.post {
+  width: 414px;
+  margin-top: 20px;
+}
+
+.post-top {
+  margin-top: 20px;
+  height: 60px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+
+.post-top h5, .post-top p {
+  margin: 0;
+}
+
+.account {
+  display: flex;
+  align-items: center;
+}
+
+.account img {
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  border: 1px solid #919191;
+  margin-right: 15px;
+}
+
+.account p {
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.post-bottom {
+  height: auto;
+  padding: 15px;
+  background-color: #FFFFFF;
+}
+
+.insta-post-icons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 13px;
+}
+
+.insta-post-icons i {
+  font-size: 23px;
+}
+
+.insta-post-icons i:hover {
+  color: #929193;
+}
+
+.icon-spacing i {
+  margin-right: 13px;
+}
+
+.post-bottom p {
+  line-height: 23px;
+  margin: 0;
+}
+
+.bold {
+  font-weight: bold;
+  color: #000000;
+}
+
+.medium-text {
+  font-size: 14px;
+}
+
+.grey {
+  color: #929193;
+}
+
+.small {
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.post-picture {
+  display: flex;
+}
+
+.post-picture img {
+  width: 414px;
+  height: 500px;
+  object-fit: cover;
+}

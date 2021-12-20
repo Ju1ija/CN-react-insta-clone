@@ -1,0 +1,43 @@
+.live-stories {
+  display: flex;
+  width: 412px;
+  height: 110px;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #FFFFFF;
+  border: 1px solid #DCDDDD;
+  border-radius: 1px;
+  margin-bottom: 5px;
+}
+
+.live-stories div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 60px;
+}
+
+.live-stories img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: auto;
+  border: 3px solid #FFFFFF;
+
+}
+
+.live-stories span {
+  font-size: 12px;
+  margin: 5px 0 0 0;
+  color: #424242;
+  width: 60px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.gradient {
+  background: linear-gradient(40deg, #FEDA75, #FA7E1E, #D62976, #962FBF, #4F5BD5);
+  border-radius: 50%;
+  height: 60px;
+}

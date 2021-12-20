@@ -1,0 +1,32 @@
+.navbar {
+  width: 414px;
+  background-color: #FFFFFF;
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+i {
+  font-size: 22px;
+}
+
+#insta-logo {
+  height: 30px;
+  margin-top: 10px;
+}
+
+#profile-picture {
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:visited {
+  color: inherit;
+}
