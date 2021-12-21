@@ -1,0 +1,110 @@
+.login-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #FFFFFF;
+}
+
+#insta-logo {
+  height: 50px;
+  margin-bottom: 30px;
+}
+
+input {
+  width: 350px;
+  height: 40px;
+  margin: 5px;
+  padding: 0 10px;
+  border: 1px solid #DCDDDD;
+  border-radius: 3px;
+  background-color: #FAFAFA;
+}
+
+.password-input {
+  display: flex;
+  align-items: center;
+  margin-left: -18px;
+  margin-bottom: 10px;
+}
+
+.password-input i {
+  margin-left: -40px;
+  cursor: pointer;
+}
+
+button {
+  width: 370px;
+  height: 40px;
+  margin: 20px;
+  border: none;
+  border-radius: 3px;
+  background-color: #59CBFE;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #0098FE;
+}
+
+.forgotten-pass {
+  color: #0098FE;
+  font-weight: bold;
+  font-size: 12px;
+  text-align: end;
+  width: 370px;
+}
+
+.or {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  margin: 10px 0 20px 0;
+}
+
+.line {
+  display: block;
+  width: 150px;
+  border-top: 1px solid #DCDDDD;
+  margin: 0 25px;
+}
+
+.facebook-login {
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.facebook-login i {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.sign-up-section {
+  text-align: center;
+  font-size: 12px;
+}
+
+.sign-up-section p {
+  margin-top: 15px;
+  color: #929193;
+}
+
+.bottom-line {
+  border-top: 1px solid #DCDDDD;
+  width: 414px;
+}
+
+.sign-up {
+  color: #0098FE;
+  font-weight: bold;
+}
+
+input:focus {
+  outline: none;
+}

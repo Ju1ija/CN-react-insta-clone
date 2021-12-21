@@ -2,10 +2,12 @@ import React, { useState, useEffect } from "react";
 import { NavBar } from "./components/navbar";
 import { LiveStories, profiles } from "./components/liveStories";
 import { PostFeed } from "./components/postFeed";
+import { Login } from "./components/login";
 import './App.css';
 
 const App = () => {
   const [data, setData] = useState([]);
+  const [loggedIn, setLoggedIn] = useState(false);
 
   useEffect(() => {
     getImages();
@@ -30,13 +32,19 @@ const App = () => {
   return (
     <div className="App">
       <div className="border">
-        <NavBar />
-        <LiveStories />
-        <div>
-          {data.map((item, index) => {
-            return <PostFeed item={item} index={index} />
-          })}
-        </div>
+        {loggedIn ? (
+          <>
+            <NavBar />
+            <LiveStories />
+            <div>
+              {data.map((item, index) => {
+                return <PostFeed item={item} index={index} />
+              })}
+            </div>
+          </>
+        ) : (
+          <Login />
+        )}
       </div>
     </div>
   );
