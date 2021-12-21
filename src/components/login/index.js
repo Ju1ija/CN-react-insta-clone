@@ -1,13 +1,12 @@
 import logo from "../navbar/logo.png";
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState, useContext } from "react";
+import { Link, useHistory, useLocation } from "react-router-dom";
 import "./login.css";
 
-export const Login = () => {
+export const Login = ({ authContext }) => {
   const [visiblePass, setVisiblePass] = useState(false);
   const [inputType, setInputType] = useState("password");
   const [passIcon, setPassIcon] = useState("bi bi-eye-slash");
-
   const visiblePassHandler = () => {
     setVisiblePass(!visiblePass);
     if (visiblePass) {
@@ -18,6 +17,21 @@ export const Login = () => {
       setPassIcon("bi bi-eye");
     }
   }
+
+  // testing Auth
+  const useAuth = () => {
+    return useContext(authContext);
+  }
+  const history = useHistory();
+  const location = useLocation();
+  const auth = useAuth();
+  const { from } = location.state || { from: { pathname: "/" } };
+  const login = () => {
+    auth.signin(() => {
+      history.replace(from);
+    });
+  };
+  // Auth
 
   return (
     <div className="login-page">
@@ -37,7 +51,7 @@ export const Login = () => {
         <i class={passIcon} onClick={visiblePassHandler}></i>
       </div>
       <span className="forgotten-pass">Forgotten password?</span>
-      <button>Log In</button>
+      <button onClick={login}>Log In</button>
       <div className="sign-up-section">
         <p>Don't have an account? <span className="sign-up"><Link to="/signup">Sign Up</Link></span></p>
       </div>
