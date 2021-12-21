@@ -7,7 +7,7 @@
   background-color: #FFFFFF;
 }
 
-#insta-logo {
+#insta-logo-login {
   height: 50px;
   margin-bottom: 30px;
 }
@@ -104,6 +104,7 @@ button:hover {
 .sign-up {
   color: #0098FE;
   font-weight: bold;
+  cursor: pointer;
 }
 
 input:focus {

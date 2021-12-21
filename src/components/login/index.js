@@ -1,5 +1,6 @@
 import logo from "../navbar/logo.png";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./login.css";
 
 export const Login = () => {
@@ -20,7 +21,7 @@ export const Login = () => {
 
   return (
     <div className="login-page">
-      <img src={logo} alt="Instagram logo" id="insta-logo" />
+      <img src={logo} alt="Instagram logo" id="insta-logo-login" />
       <button className="facebook-login">
         <i class="bi bi-facebook"></i>
         <span>Log in with Facebook</span>
@@ -38,7 +39,7 @@ export const Login = () => {
       <span className="forgotten-pass">Forgotten password?</span>
       <button>Log In</button>
       <div className="sign-up-section">
-        <p>Don't have an account? <span className="sign-up">Sign Up</span></p>
+        <p>Don't have an account? <span className="sign-up"><Link to="/signup">Sign Up</Link></span></p>
       </div>
     </div >
   );

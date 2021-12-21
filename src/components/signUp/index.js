@@ -1,5 +1,6 @@
 import logo from "../navbar/logo.png";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./signUp.css";
 
 export const SignUp = () => {
@@ -20,7 +21,7 @@ export const SignUp = () => {
 
   return (
     <div className="signup-page">
-      <img src={logo} alt="Instagram logo" id="insta-logo" />
+      <img src={logo} alt="Instagram logo" id="insta-logo-signup" />
       <button className="facebook-signup">
         <i class="bi bi-facebook"></i>
         <span>Sign up with Facebook</span>
@@ -39,7 +40,7 @@ export const SignUp = () => {
       </div>
       <button>Sign Up</button>
       <div className="sign-in-section">
-        <p>Already have an account? <span className="sign-in">Sign In</span></p>
+        <p>Already have an account? <span className="sign-in"><Link to="/login">Sign In</Link></span></p>
       </div>
     </div >
   );
