@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   display: flex;
   flex-direction: column;
@@ -7,7 +12,6 @@
 }
 
 .border {
-  margin-top: 40px;
   width: 414px;
   border: 1px solid #DCDDDD;
 }
