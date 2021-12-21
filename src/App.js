@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import { NavBar } from "./components/navbar";
 import { LiveStories, profiles } from "./components/liveStories";
 import { PostFeed } from "./components/postFeed";
-import { Login } from "./components/login";
+// import { Login } from "./components/login";
+import { SignUp } from "./components/signUp";
 import './App.css';
 
 const App = () => {
@@ -43,7 +44,7 @@ const App = () => {
             </div>
           </>
         ) : (
-          <Login />
+          <SignUp />
         )}
       </div>
     </div>

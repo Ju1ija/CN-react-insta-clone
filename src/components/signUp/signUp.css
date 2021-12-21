@@ -1,4 +1,4 @@
-.login-page {
+.signup-page {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -50,14 +50,6 @@ button:hover {
   cursor: pointer;
 }
 
-.forgotten-pass {
-  color: #0098FE;
-  font-weight: bold;
-  font-size: 12px;
-  text-align: end;
-  width: 370px;
-}
-
 .or {
   display: flex;
   align-items: center;
@@ -72,7 +64,7 @@ button:hover {
   margin: 0 25px;
 }
 
-.facebook-login {
+.facebook-signup {
   color: #FFFFFF;
   font-weight: bold;
   font-size: 14px;
@@ -81,17 +73,17 @@ button:hover {
   justify-content: center;
 }
 
-.facebook-login i {
+.facebook-signup i {
   margin-right: 10px;
   font-size: 20px;
 }
 
-.sign-up-section {
+.sign-in-section {
   text-align: center;
   font-size: 12px;
 }
 
-.sign-up-section p {
+.sign-in-section p {
   margin-top: 15px;
   color: #929193;
 }
@@ -101,9 +93,10 @@ button:hover {
   width: 414px;
 }
 
-.sign-up {
+.sign-in {
   color: #0098FE;
   font-weight: bold;
+  cursor: pointer;
 }
 
 input:focus {
