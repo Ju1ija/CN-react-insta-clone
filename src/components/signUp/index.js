@@ -1,9 +1,14 @@
 import logo from "../navbar/logo.png";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
+import { fetchRequestSignup } from "../../utils";
 import "./signUp.css";
 
 export const SignUp = () => {
+  const history = useHistory();
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [visiblePass, setVisiblePass] = useState(false);
   const [inputType, setInputType] = useState("password");
   const [passIcon, setPassIcon] = useState("bi bi-eye-slash");
@@ -19,6 +24,17 @@ export const SignUp = () => {
     }
   }
 
+  const signUpHandler = async () => {
+    // e.preventDefault();
+    const success = fetchRequestSignup(username, email, password);
+    setUsername("");
+    setEmail("");
+    setPassword("");
+    if (success) {
+      history.push("/login");
+    }
+  }
+
   return (
     <div className="signup-page">
       <img src={logo} alt="Instagram logo" id="insta-logo-signup" />
@@ -31,14 +47,14 @@ export const SignUp = () => {
         <span>OR</span>
         <span className="line"></span>
       </div>
-      <input autocapitalize="none" placeholder="Email address" type="text" />
-      <input autocapitalize="none" placeholder="Full Name" type="text" />
-      <input autocapitalize="none" placeholder="Username" type="text" />
+      <input onChange={(e) => setUsername(e.target.value)} autocapitalize="none" placeholder="Username" type="text" value={username} />
+      <input onChange={(e) => setEmail(e.target.value)} autocapitalize="none" placeholder="Email address" type="text" value={email} />
+      {/* <input autocapitalize="none" placeholder="Full Name" type="text" /> */}
       <div className="password-input">
-        <input autocapitalize="none" placeholder="Password" type={inputType} />
+        <input onChange={(e) => setPassword(e.target.value)} autocapitalize="none" placeholder="Password" type={inputType} value={password} />
         <i class={passIcon} onClick={visiblePassHandler}></i>
       </div>
-      <button>Sign Up</button>
+      <button onClick={signUpHandler}>Sign Up</button>
       <div className="sign-in-section">
         <p>Already have an account? <span className="sign-in"><Link to="/login">Sign In</Link></span></p>
       </div>
